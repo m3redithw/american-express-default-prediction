@@ -67,3 +67,12 @@ def age_calculator(df):
     df.drop(columns=['S_2', 'min_dates'], inplace=True)
                              
     return df
+
+
+def impute_numerical_nulls(df, num_cols):
+    
+    for col in num_cols:
+        df[col].fillna(col.mean(), inplace=True)
+        
+    return df    
+                
