@@ -14,7 +14,7 @@ Whether out at a restaurant or buying tickets to a concert, modern life counts o
 
 **Credit default prediction** is central to managing risk in a consumer lending business. Credit default prediction allows lenders to optimize lending decisions, which leads to a better customer experience and sound business economics. Current models exist to help manage risk. But it's possible to create better models that can outperform those currently in use.
 
-## :chart:   Business Goals
+# Business Goals
 ▪️ Apply our machine learning skills to predict credit default.
 
 ▪️ Leverage an industrial scale data set to build a machine learning model that challenges the current model in production.
@@ -28,14 +28,14 @@ Whether out at a restaurant or buying tickets to a concert, modern life counts o
 
 ▪️ August 24, 2022 - Final Submission Deadline.
 
-## Data Context
+# Data Context
 Training, validation, and testing datasets include time-series behavioral data and anonymized customer profile information.
 
-## :memo:   Initial Questions
+# Initial Questions
 
-## :open_file_folder:   Data Dictionary
+# Data Dictionary
 
-## :placard:    Process
+# Process
 #### :one:   Data Acquisition
 
 <details>
@@ -133,15 +133,15 @@ Training, validation, and testing datasets include time-series behavioral data a
 #### :five:    Modeling Evaluation
 
 
-## :repeat:   Steps to Reproduce
+# Steps to Reproduce
 - [x] 
 - [x] Clone the repo
 - [x] 
 - [x] 
 - [x] 
-- [x] 
-## :key:    Key Findings
-<img width="800" alt="churn_drivers" src="https://user-images.githubusercontent.com/105242871/179089814-967c69e9-7b54-433b-a310-aa11de46b94f.png">
+
+
+# Key Findings
 ▪️
 
 ▪️ 
@@ -152,15 +152,8 @@ Training, validation, and testing datasets include time-series behavioral data a
 
 ▪️
 
-## :high_brightness:    Recommendations
+# Recommendations
 ▪️
-
-▪️ 
-
-▪️ 
-
-## 🔜  Next Steps
-▪️ 
 
 ▪️ 
 
