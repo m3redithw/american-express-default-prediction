@@ -19,6 +19,8 @@ Whether out at a restaurant or buying tickets to a concert, modern life counts o
 
 ▪️ Leverage an industrial scale data set to build a machine learning model that challenges the current model in production.
 
+***
+
 # Timeline
 ▪️ May 25, 2022 - Start Date.
 
@@ -28,52 +30,40 @@ Whether out at a restaurant or buying tickets to a concert, modern life counts o
 
 ▪️ August 24, 2022 - Final Submission Deadline.
 
+***
+
 # Data Context
 Training, validation, and testing datasets include time-series behavioral data and anonymized customer profile information.
 
-# Initial Questions
+***
 
-# Data Dictionary
+# Data Context
+The objective of this competition is to predict the probability that a customer does not pay back their credit card balance amount in the future based on their monthly customer profile. The target binary variable is calculated by observing 18 months performance window after the latest credit card statement, and if the customer does not pay due amount in 120 days after their latest statement date it is considered a default event.
+
+The dataset contains aggregated profile features for each customer at each statement date. Features are anonymized and normalized, and fall into the following general categories:
+
+    - D_* = Delinquency variables
+    - S_* = Spend variables
+    - P_* = Payment variables
+    - B_* = Balance variables
+    - R_* = Risk variables
+
+***
 
 # Process
 #### :one:   Data Acquisition
 
 <details>
-<summary> Gather data from mySQL database</summary>
-
-- Create env.py file to establish connection to mySQL server
-
-- Use **telco_churn** database in the mySQL server
-
-- Write query to join useful tables to gather all data about the customers:  <u>customers, contract_types, payment_types, internet_service_types </u>
-     ```sh
-     SELECT * FROM customers JOIN contract_types USING (contract_type_id) JOIN payment_types ON customers.payment_type_id = payment_types.payment_type_id JOIN internet_service_types ON customers.internet_service_type_id = internet_service_types.internet_service_type_id
-     ```
-</details>
-
-<details>
 <summary> acqure.py</summary>
 
-- Create acquire.py and user-defined function `get_telco_data()` to gather data from mySQL
-     ```sh
-     def get_telco_data():
-     
-     if os.path.isfile('telco.csv'):
-        df = pd.read_csv('telco.csv', index_col=0)
-    else:
-        df = new_telco_data()
-        df.to_csv('telco.csv')
-        
-    return df
-    ```
-- Import [acquire.py](acquire.py)
+- 
 
-- Test acquire function
+- 
 
-- Calling the function, and store the table in the form of dataframe
-    ```sh
-    df = acquire.get_telco_data()
-    ```
+- 
+
+- 
+
 </details>
 
 #### :two:   Data Preparation
@@ -81,57 +71,25 @@ Training, validation, and testing datasets include time-series behavioral data a
 <details>
 <summary> Data Cleaning</summary>
 
-- **Missing values: null values are dropped** (total_charges)
-     ```sh
-    df['total_charges'] = df['total_charges'].str.strip()
-    df = df[df.total_charges != '']
-    ```
-- **Data types: object is converted to the numeric datatype** (total_charges)
-     ```sh
-     df['total_charges'] = df.total_charges.astype(float)
-     ```
-- **Dummy variables: created dummy variables for binary and non-binary categorical variables**
+- 
 
-- **Duplicate columns: duplicated columns are dropped**
+-
 
-- Create function `prep_telco` to clean and prepare data with steps above
-
-- Import [prepare.py](prepare.py)
-
-- Test prepare function
-
-- Call the function, and store the cleaned data in the form of dataframe
-</details>
-
-<details>
-<summary> Data Splitting</summary>
-
-- Create function `split_telco_data()` to split data into **train, validate, test**
-
-- Test prepare function
-
-- Check the size of each dataset
-     ```sh
-     train.shape, validate.shape, test.shape
-     ```
-- Call the function, and store the 3 data samples separately in the form of dataframe
-     ```sh
-     train, validate, test = prepare.split_telco_data(df)
-     ```
 </details>
 
 #### :three:   Exploratory Analysis
 
 
 #### :four:    Statistical Testing & Modeling
-- Conduct T-Test for categorical variable vs. numerical variable
+- 
 
-- Conduct Chi^2 Test for categorical variable vs. categorical variable
+- 
 
-- Conclude hypothesis and address the initial questions
+- 
 
 #### :five:    Modeling Evaluation
 
+***
 
 # Steps to Reproduce
 - [x] 
@@ -140,6 +98,7 @@ Training, validation, and testing datasets include time-series behavioral data a
 - [x] 
 - [x] 
 
+***
 
 # Key Findings
 ▪️
@@ -150,7 +109,7 @@ Training, validation, and testing datasets include time-series behavioral data a
 
 ▪️
 
-▪️
+***
 
 # Recommendations
 ▪️
